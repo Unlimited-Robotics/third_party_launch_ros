@@ -216,7 +216,7 @@ class Node(ExecuteProcess):
             # evaluate to paths), or dictionaries of parameters (fields can be substitutions).
             normalized_params = normalize_parameters(parameters)
         # Forward 'exec_name' as to ExecuteProcess constructor
-        kwargs['name'] = exec_name
+        kwargs['name'] = name
         super().__init__(cmd=cmd, **kwargs)
         self.__package = package
         self.__node_executable = executable
